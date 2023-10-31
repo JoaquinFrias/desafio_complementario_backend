@@ -1,0 +1,46 @@
+[
+	{
+		"id": "3402771ab9",
+		"title": "Producto prueba desde Postman",
+		"description": "Este es un producto prueba creado desde Postman",
+		"code": "xyz199",
+		"price": 500,
+		"status": true,
+		"stock": 5,
+		"category": "Otro",
+		"thumbnail": []
+	},
+	{
+		"id": "8d888d0d85",
+		"title": "Producto prueba desde Postman",
+		"description": "Este es un producto prueba creado desde Postman",
+		"code": "xyz199",
+		"price": 500,
+		"status": true,
+		"stock": 5,
+		"category": "Otro",
+		"thumbnail": []
+	},
+	{
+		"id": "08323fc578",
+		"title": "Prod desde Form 4",
+		"description": "Intento 4 de agregar producto desde formulario ",
+		"code": "sds939",
+		"price": "256",
+		"status": true,
+		"stock": "25",
+		"category": "Ilusión ",
+		"thumbnail": []
+	},
+	{
+		"id": "7be9d82ecd",
+		"title": "Prod desde Form 3450",
+		"description": "Intento 500000 en realTime",
+		"code": "ewe323",
+		"price": "65",
+		"status": true,
+		"stock": "63",
+		"category": "Algo",
+		"thumbnail": []
+	}
+]

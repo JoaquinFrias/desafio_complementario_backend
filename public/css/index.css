@@ -1,0 +1,117 @@
+/* Home */
+.container h1{
+    text-align: center;
+    color: indigo;
+}
+
+p {
+    color: rgb(185, 133, 223);
+}
+
+#divProducts{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#divProducts div{
+    width: 25rem;
+    margin: 1rem;
+    padding: 1rem 1rem 0rem 1rem;
+    border-style: solid;
+    border-color: indigo; 
+}
+
+#divProducts h3{
+    font-size: 20px;
+}
+
+#divProducts p{
+    color: gray;
+    font-size: 15px;
+}
+
+#divProducts #idprod{
+    text-align: right;
+    font-size: 9px;
+}
+
+/* Real Time Products */
+.container div h3{
+    font-size: 20px;
+    margin: 0;
+}
+
+.container #addprod{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container #addprod input{
+    height: 2rem;
+    width: 25rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 15px;
+}
+
+.container #addprod #addButton{
+    width: 20rem;
+    border-color: indigo;
+    border-width: 2px;
+    color: rgb(185, 133, 223);
+}
+
+.container #addprod #addButton:hover{
+    background-color: indigo;
+    color: aliceblue;
+}
+
+.container #deleteprod input{
+    height: 2rem;
+    width: 20rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 15px;
+}
+
+.container #deleteprod #deleteButton{
+    width: 15rem;
+    border-color: rgb(184, 7, 45);
+    border-width: 2px;
+    color: rgb(184, 7, 45);
+}
+
+.container #deleteprod #deleteButton:hover{
+    background-color: rgb(184, 7, 45);
+    color: aliceblue;
+}
+
+#divRealTimeProd{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#divRealTimeProd div{
+    width: 25rem;
+    margin: 1rem;
+    padding: 1rem 1rem 0rem 1rem;
+    border-style: solid;
+    border-color: indigo; 
+}
+
+#divRealTimeProd h3{
+    font-size: 20px;
+}
+
+#divRealTimeProd p{
+    color: gray;
+    font-size: 15px;
+}
+
+#divRealTimeProd #idprod{
+    text-align: right;
+    font-size: 9px;
+}

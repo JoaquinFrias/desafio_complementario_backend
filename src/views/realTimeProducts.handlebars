@@ -1,0 +1,32 @@
+<main class="container">
+    <h1>Real-time product page</h1>
+    <p>Here you can view, add and delete products in real time</p>
+
+    <div>
+        <h3>Add a product:</h3>
+        <form id='addprod' action="/api/products" method="POST">
+            <input id='titleprod' type="text" required placeholder="Write the name of the product">
+            <input id='descprod' type="text" required placeholder="Write a brief description of the product">
+            <input id='codeprod' type="text" required placeholder="Write the product code">
+            <input id='priceprod' type="number" required placeholder="Write the price of the product">
+            <input id='stockprod' type="number" required placeholder="Write the available stock of the product">
+            <input id='catprod' type="text" required placeholder="Write the product category">
+            <input id="addButton" type="submit" value="Add Product" class="outline">
+        </form>
+    </div>
+    <div>
+        <h3>Product movements in real time:</h3>
+        <div id="divRealTimeProd">
+        </div>
+    </div>
+    <div>
+        <h3>Delete a product:</h3>
+        <form id='deleteprod' action="/api/products/:pid" method="DELETE">
+            <input id='idprod' type="text" required placeholder="Write the ID of the product you want to delete">
+            <input id="deleteButton" type="submit" value="Delete Product" class="outline">
+        </form>
+    </div>
+</main>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/realTimeProducts.js"></script>

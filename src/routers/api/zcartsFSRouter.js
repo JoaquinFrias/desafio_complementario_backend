@@ -1,40 +1,40 @@
 import { Router } from 'express';
-import CartsManager from '../data/cartManager.js';
+import CartsFSManager from '../../dao/zcartFSManager.js';
 
-const cartsRouter = Router();
+const cartsFSRouter = Router();
 
-const cartManager = new CartsManager('src/carts.json');
+const cartFSManager = new CartsFSManager('src/carts.json');
 
-cartsRouter.get('/carts', async (req, res) => {
-    let carts = await cartManager.getCarts();
+cartsFSRouter.get('/carts', async (req, res) => {
+    let carts = await cartFSManager.getCarts();
     res.status(200).json(carts)
 })
 
-cartsRouter.post('/carts', async (req, res) =>{
+cartsFSRouter.post('/carts', async (req, res) =>{
     let cart = req.body
     try {
-        await cartManager.createCart(cart)
+        await cartFSManager.createCart(cart)
         res.status(201).json({message:'Carrito creado exitosamente'});
     } catch (error) {
         res.status(400).send({ status: "error", message: "Lo sentimos, carrito no creado. Intentelo de nuevo mas tarde" });
     }
 });
 
-cartsRouter.get('/carts/:cid', async (req, res) => {
+cartsFSRouter.get('/carts/:cid', async (req, res) => {
     let cid = req.params.cid
-    let carts = await cartManager.getProductsOfCart(cid);
+    let carts = await cartFSManager.getProductsOfCart(cid);
     res.status(200).json(carts)
 })
 
-cartsRouter.post('/carts/:cid/product/:pid', async (req, res) =>{
+cartsFSRouter.post('/carts/:cid/product/:pid', async (req, res) =>{
     let cid = req.params.cid
     let pid = req.params.pid
     try {
-        await cartManager.addProductsToCart(cid, pid)
+        await cartFSManager.addProductsToCart(cid, pid)
         res.status(201).json({message:'Producto agregado con éxito'});
     } catch (error) {
         res.status(400).send({ status: "error", message: "Lo sentimos, no pudimos agregar el producto al carrito" });
     }
 });
 
-export default cartsRouter;
+export default cartsFSRouter;

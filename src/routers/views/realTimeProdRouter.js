@@ -2,7 +2,7 @@ import { Router } from "express";
 
 const realTimeProdRouter = Router();
 
-realTimeProdRouter.get('/', (req, res) => {
+realTimeProdRouter.get('/realtimeproducts', (req, res) => {
 res.render('realTimeProducts')
 })
 

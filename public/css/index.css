@@ -36,6 +36,15 @@ p {
     font-size: 9px;
 }
 
+div #log-messages{
+    width: 50rem;
+    margin: 1rem;
+    padding: 1rem 1rem 0rem 1rem;
+    border-style: solid;
+    border-color: indigo; 
+}
+
+
 /* Real Time Products */
 .container div h3{
     font-size: 20px;

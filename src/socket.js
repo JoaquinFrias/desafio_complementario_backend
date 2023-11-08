@@ -2,6 +2,7 @@ import { Server } from 'socket.io';
 //import ProductsManager from './dao/zproductFSManager.js';
 import MessagesManager from './dao/messageManager.js';
 import ProductsManager from './dao/productManager.js';
+import { text } from 'express';
 
 
 let io;
@@ -22,8 +23,8 @@ export const init = async (httpServer) => {
         socketClient.broadcast.emit('new-client');
 
         socketClient.on('new-message', async (data) => {
-            const { username, text } = data;
-            let newMessage = await MessagesManager.createMessage(data);
+            const { username, message } = data;
+            let newMessage = await MessagesManager.createMessage({ username, message:text });
             let allMessages = await MessagesManager.getMessages();
             io.emit('notification', allMessages)
             })
